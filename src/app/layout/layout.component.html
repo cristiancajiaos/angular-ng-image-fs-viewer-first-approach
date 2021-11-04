@@ -1,1 +1,23 @@
-<p>layout works!</p>
+<section class="layout">
+  <div class="row">
+    <div class="col-6">
+      <img src="https://via.placeholder.com/1920x1080/f00/fff" class="img-fluid"/>
+    </div>
+  </div>
+
+  <hr/>
+
+  <a href="#" (click)="showLightbox(0)">
+    <i class="fas fa-search-plus fa-fw"></i>
+  </a>
+
+  <!--
+  <img src="https://via.placeholder.com/1920x1080/f00/fff" (click)="showLightbox(0)" />
+  -->
+
+  <ng-image-fullscreen-view
+    [images]="imageObject"
+    [imageIndex]="selectedImageIndex"
+    [show]="showFlag"
+    (close)="closeEventHandler()"></ng-image-fullscreen-view>
+</section>
